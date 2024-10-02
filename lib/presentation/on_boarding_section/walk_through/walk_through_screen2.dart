@@ -14,9 +14,9 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import 'components/page1.dart';
 
 class WalkThroughScreen2 extends StatelessWidget {
-   WalkThroughScreen2({super.key});
+  WalkThroughScreen2({super.key});
 
-   PageController pageController=PageController();
+  PageController pageController=PageController();
 
 
   @override
@@ -46,29 +46,29 @@ class WalkThroughScreen2 extends StatelessWidget {
                 )),
               sizedBoxHeight20,
                 Obx(
-                 () {
+                () {
                     return Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-           onpageChanged.value==0?   Container(
+          onpageChanged.value==0?   Container(
                     width: Adaptive.w(8),
                     height: Adaptive.h(1),
-               decoration: BoxDecoration(
-                     color: buttonColor,
-                     borderRadius: BorderRadius.circular(Adaptive.w(5))
-               ),
+              decoration: BoxDecoration(
+                    color: buttonColor,
+                    borderRadius: BorderRadius.circular(Adaptive.w(5))
+              ),
               ): CircleAvatar(
                     radius: Adaptive.w(1),
                     backgroundColor: grey,
               ),
               sizedBoxWidth15,
-               onpageChanged.value==1?   Container(
+              onpageChanged.value==1?   Container(
                     width: Adaptive.w(8),
                     height: Adaptive.h(1),
-               decoration: BoxDecoration(
-                     color: buttonColor,
-                     borderRadius: BorderRadius.circular(Adaptive.w(5))
-               ),
+              decoration: BoxDecoration(
+                    color: buttonColor,
+                    borderRadius: BorderRadius.circular(Adaptive.w(5))
+              ),
               ): CircleAvatar(
                     radius: Adaptive.w(1),
                     backgroundColor: grey,
@@ -78,10 +78,10 @@ class WalkThroughScreen2 extends StatelessWidget {
                 onpageChanged.value==2?   Container(
                     width: Adaptive.w(8),
                     height: Adaptive.h(1),
-               decoration: BoxDecoration(
-                     color: buttonColor,
-                     borderRadius: BorderRadius.circular(Adaptive.w(5))
-               ),
+              decoration: BoxDecoration(
+                    color: buttonColor,
+                    borderRadius: BorderRadius.circular(Adaptive.w(5))
+              ),
               ): CircleAvatar(
                     radius: Adaptive.w(1),
                     backgroundColor: grey,
@@ -121,7 +121,7 @@ class WalkThroughScreen2 extends StatelessWidget {
                       GestureDetector(
                         onTap: () {
 
-                          Get.to(()=>const CreateAccountScreen());
+                          Get.to(()=> CreateAccountScreen());
                         
                         },
                         child: Container(

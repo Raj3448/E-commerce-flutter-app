@@ -10,4 +10,4 @@ RxString selectedValue='Login'.obs;
     selectedValue.value=login;
 
   }
-} 
+}

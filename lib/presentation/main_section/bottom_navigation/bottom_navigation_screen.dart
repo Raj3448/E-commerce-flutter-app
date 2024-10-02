@@ -26,11 +26,11 @@ class _BottomNavigationState extends State<BottomNavigation> {
   // int _selectedIndex = 0;
 
   static final List<Widget> _widgetOptions = <Widget>[
-   
+  
     HomeScreen(),
         WishListScreen(),
-            OrderScreen(), 
-               AccountScreen(),
+            OrderScreen(),
+              AccountScreen(),
             
             
   ];
@@ -43,7 +43,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         return _widgetOptions.elementAt(bottom.selectedIndex.value);
       }),
       bottomNavigationBar: ClipRRect(
-         borderRadius: BorderRadius.only(
+        borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(0.sp),
                 topRight: Radius.circular(0.sp)),
         child: Container(
@@ -58,7 +58,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
           width: 1.0, // Choose the width of the border
         ),
           ),
-             
+            
               // boxShadow: [
               //   BoxShadow(
               //     blurRadius: 20,
@@ -78,7 +78,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
                         ? Column(
                             children: [
                               Image.asset('assets/images/Home.png'),
-                               Text('Home',style: GoogleFonts.roboto(fontSize: 12.px,fontWeight: FontWeight.w500),),
+                              Text('Home',style: GoogleFonts.roboto(fontSize: 12.px,fontWeight: FontWeight.w500),),
                             ],
                           )
                         : Column(
@@ -88,7 +88,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
                                 color: chatColor,
                                 
                               ),
-                               Text(
+                              Text(
                                 'Home',
                                 style: GoogleFonts.roboto(color: chatColor,fontSize: 12.px,fontWeight: FontWeight.w500),
                               ),
@@ -103,7 +103,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
                         ? Column(
                             children: [
                               Image.asset('assets/images/bottom2.png'),
-                               Text('WishList',style:GoogleFonts.roboto(fontSize: 12.px,fontWeight: FontWeight.w500),),
+                              Text('WishList',style:GoogleFonts.roboto(fontSize: 12.px,fontWeight: FontWeight.w500),),
                             ],
                           )
                         : Column(
@@ -127,7 +127,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
                         ? Column(
                             children: [
                               Image.asset('assets/images/bottom3.png'),
-                               Text('Orders', style: GoogleFonts.roboto(fontSize: 12.px,fontWeight: FontWeight.w500)),
+                              Text('Orders', style: GoogleFonts.roboto(fontSize: 12.px,fontWeight: FontWeight.w500)),
                             ],
                           )
                         : Column(
@@ -143,7 +143,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
                             ],
                           ),
                   ),
-                   GestureDetector(
+                  GestureDetector(
                     onTap: () {
                       bottom.bottomNavigationIndexSelecting(3, 'account');
                     },
@@ -151,7 +151,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
                         ? Column(
                             children: [
                               Image.asset('assets/images/bottom4.png'),
-                               Text('Account', style: GoogleFonts.roboto(fontSize: 12.px,fontWeight: FontWeight.w500)),
+                              Text('Account', style: GoogleFonts.roboto(fontSize: 12.px,fontWeight: FontWeight.w500)),
                             ],
                           )
                         : Column(

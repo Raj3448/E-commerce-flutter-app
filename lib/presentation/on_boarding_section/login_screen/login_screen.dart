@@ -9,12 +9,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class LoginScreen extends StatelessWidget {
-   LoginScreen({super.key});
+  LoginScreen({super.key});
 
 
- PageController pageController=PageController();
+PageController pageController=PageController();
 
- final login=Get.put(LoginController());
+final login=Get.put(LoginController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +41,7 @@ class LoginScreen extends StatelessWidget {
             Align(
               alignment: Alignment.centerLeft,
               child: Text('Login using Mobile\nNumber or Email',style: GoogleFonts.poppins(
-                 fontWeight: FontWeight.w600,fontSize: 30.px),),
+                fontWeight: FontWeight.w600,fontSize: 30.px),),
             ),
                         SizedBox(height: Adaptive.h(2),),
 
@@ -54,18 +54,18 @@ class LoginScreen extends StatelessWidget {
         
               ),
               child: Obx(
-               () {
+              () {
                   return Row(
                     children: [
-                     login.selectedValue.value=='Login'? GestureDetector(
+                    login.selectedValue.value=='Login'? GestureDetector(
                           onTap: () {
                             //  login.changingSelectedOption('login');
                                 pageController.previousPage(duration: Duration(milliseconds: 300), curve: Curves.linear);
                           },
-                           child: Material(
+                          child: Material(
                               elevation: 5,
                                                       borderRadius: BorderRadius.circular(Adaptive.w(8)),
-                                 
+                                
                               child: Container(
                                 width: Adaptive.w(45),
                                 height: Adaptive.h(6),
@@ -77,13 +77,13 @@ class LoginScreen extends StatelessWidget {
                                 child: Center(child: Text('Mobile Number',style: GoogleFonts.roboto(color: Colors.white,fontWeight: FontWeight.w600),),),
                               ),
                             ),
-                         )
-                         :GestureDetector(
+                        )
+                        :GestureDetector(
                           onTap: () {
                               login.changingSelectedOption('Login');
                                 pageController.previousPage(duration: Duration(milliseconds: 300), curve: Curves.linear);
                           },
-                           child: Container(
+                          child: Container(
                                 padding: EdgeInsets.only(left: 5.w,right: 5.w,top: 1.h,bottom: 1.h),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
@@ -91,7 +91,7 @@ class LoginScreen extends StatelessWidget {
                                 ),
                                 child: Center(child: Text('Mobile Number',style: GoogleFonts.roboto(color: Colors.black,fontWeight: FontWeight.w600),),),
                               ),
-                         )
+                        )
                         ,
                       Spacer(),
                       login.selectedValue.value=='Email'?   GestureDetector(
@@ -99,32 +99,32 @@ class LoginScreen extends StatelessWidget {
                                 login.changingSelectedOption('Email');
                                 pageController.nextPage(duration: Duration(milliseconds: 300), curve: Curves.linear);
                               },
-                               child:  Container(
+                              child:  Container(
                                 width: Adaptive.w(45),
                                 height: Adaptive.h(6),
                                 // padding: EdgeInsets.only(left: 5.w,right: 5.w,top: 1.h,bottom: 1.h),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(Adaptive.w(12)),
-                                   color:buttonColor ,
+                                  color:buttonColor ,
                                 ),
                                 child: Center(child: Text('Email',style: GoogleFonts.roboto(color: Colors.black,fontWeight: FontWeight.w600),),),
                               ),
                             )
-                             :GestureDetector(
+                            :GestureDetector(
                               onTap: () {
                                 login.changingSelectedOption('Email');
                                 pageController.nextPage(duration: Duration(milliseconds: 300), curve: Curves.linear);
                               },
-                               child: Container(
-                                                   padding: EdgeInsets.only(left: 12.w,right: 12.w,top: 1.h,bottom: 1.h),
-                                                   decoration: BoxDecoration(
+                              child: Container(
+                                                  padding: EdgeInsets.only(left: 12.w,right: 12.w,top: 1.h,bottom: 1.h),
+                                                  decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                   // color: Colors.transparent,
                                   
-                                                   ),
-                                                   child:  Center(child: Text(' Email',style: GoogleFonts.roboto(color: Colors.black,fontWeight: FontWeight.w600),),),
-                                                   ),
-                             )
+                                                  ),
+                                                  child:  Center(child: Text(' Email',style: GoogleFonts.roboto(color: Colors.black,fontWeight: FontWeight.w600),),),
+                                                  ),
+                            )
                                             
                     ],
                   );
@@ -143,8 +143,7 @@ class LoginScreen extends StatelessWidget {
                   children:  [
                     LoginScreenWithPhone(),
                     LoginScreenWithEmail()
-                    // LoginScreenWithPhone(),
-                    // LoginWithEmail()
+                    
                   ],
                   onPageChanged: (value) {
                     print("index:$value");

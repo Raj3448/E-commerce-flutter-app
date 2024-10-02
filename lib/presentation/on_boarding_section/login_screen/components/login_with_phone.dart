@@ -19,66 +19,40 @@ class LoginScreenWithPhone extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // Align(
-            //   alignment: Alignment.centerLeft,
-            //   child: Text('Mobile Number',style: GoogleFonts.poppins(
-            //     fontSize: 16.sp,
-            //     fontWeight: FontWeight.w500
-                
-            //   ),),
-            // ),
             SizedBox(
               height: 1.h,
             ),
             TextField(
-             decoration: InputDecoration(
+            decoration: InputDecoration(
                         floatingLabelBehavior: FloatingLabelBehavior.always,
-
-               // label: Text('Mobile Number'),
-               labelText: 'Mobile Number',
-               labelStyle: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 14.px,color: black),
-               border: OutlineInputBorder(
+              labelText: 'Mobile Number',
+              labelStyle: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 14.px,color: black),
+              border: OutlineInputBorder(
                 borderSide: BorderSide(color: black,
                 ),
 
                 borderRadius: BorderRadius.circular(10)
-               ),
+              ),
                 focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: grey)
-               ),
-              //  border: OutlineInputBorder(borderSide: BorderSide.none),
-               hintText: '+91 | Mobile number ',
-               hintStyle: TextStyle(
+              ),
+              hintText: '+91 | Mobile number ',
+              hintStyle: TextStyle(
                 color: grey.withOpacity(0.3),
-               ),
+              ),
               contentPadding: EdgeInsets.all(10)
-             ),
-             
-             
+            ),
+            
+            
             ),
                                                 SizedBox(height: Adaptive.h(2),),
 
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // Checkbox(
-            //           value: true, // Set the initial value of the checkbox
-            //           onChanged: (bool? value) {
-            //             // Define a function to handle changes in the checkbox state
-            //             print('Checkbox value changed to: $value');
-            //           },
-            //           shape: RoundedRectangleBorder(
-            //             borderRadius: BorderRadius.circular(4.0),
-            //             side: BorderSide(color: Color(0XFFFFDC80)),
-            //           ),
-            //           checkColor:Colors.white, // Color of the check mark
-            //           activeColor: Color(0XFFFFDC80), // Color of the box when checked
-            //           focusColor: Color(0XFFFFDC80),
-                      
-            //         ),
             sizedBoxHeight10,
 
-                     RichText(
+                    RichText(
                   text: TextSpan(
                     children: [
                       TextSpan(
@@ -99,14 +73,14 @@ class LoginScreenWithPhone extends StatelessWidget {
                       ),
                     ]
                   )
-                     )
+                    )
           ],
         ),
         SizedBox(height: Adaptive.h(8),),
         InkWell(
-           onTap: () {
-             Get.to(()=> OtpScreen());
-           },
+          onTap: () {
+            Get.to(()=> OtpScreen());
+          },
           child: ButtonWidget(backgroundColor:buttonColor , title: 'Get Otp', textColor: Colors.white,heights: Adaptive.h(6),)),
         SizedBox(height: 2.h,),
         InkWell(
@@ -117,10 +91,10 @@ class LoginScreenWithPhone extends StatelessWidget {
             children: [
               TextSpan(
                 text: 'By continuing, I agree of the',
-               style: GoogleFonts.roboto(
+              style: GoogleFonts.roboto(
                 color: Color(0XFF505050),
-               ),
-               
+              ),
+              
               ),
               TextSpan(
                 text: ' Terms of Use',
@@ -130,26 +104,26 @@ class LoginScreenWithPhone extends StatelessWidget {
                   fontSize: 14.px
                 )
               ),
-               TextSpan(
+              TextSpan(
                 text: '&',
-               style: GoogleFonts.roboto(
+              style: GoogleFonts.roboto(
                 color: Color(0XFF505050),
-               ),
-               
               ),
-               TextSpan(
+              
+              ),
+              TextSpan(
                 text: ' Privacy \npolicy ',
-               style: GoogleFonts.roboto(
-               color: buttonColor,
+              style: GoogleFonts.roboto(
+              color: buttonColor,
                   fontWeight: FontWeight.w500,
                   fontSize: 14.px
-               ),
-               
+              ),
+              
               ),
             ]
           )),
         ),
-       
+      
           ],
         ),
       ),

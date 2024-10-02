@@ -84,7 +84,7 @@ class _CreateAccountScreen2State extends State<CreateAccountScreen2> {
                 children: [
                   sizedBoxHeight10,
                   Obx(
-                   () {
+                  () {
                       return Flex(
                         direction: Axis.horizontal,
                         children: [
