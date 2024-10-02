@@ -1,6 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:ecommerce_seller/presentation/main_section/account/service/user_service.dart';
 import 'package:ecommerce_seller/presentation/main_section/account/store/user_store.dart';
+import 'package:ecommerce_seller/presentation/main_section/home_screen/top_products/service/product_service.dart';
+import 'package:ecommerce_seller/presentation/main_section/home_screen/top_products/store/product_store.dart';
 import 'package:ecommerce_seller/presentation/on_boarding_section/create_account/store/create_new_account_store.dart';
 import 'package:ecommerce_seller/presentation/on_boarding_section/login_screen/store/login_store.dart';
 import 'package:ecommerce_seller/utilz/auth_services/auth_service.dart';
@@ -30,5 +32,11 @@ Future<void> registerDependecyInjections() async{
       );
   GetIt.instance.registerLazySingleton(
         () => UserStore(userService: GetIt.I<UserService>())
+      );
+  GetIt.instance.registerLazySingleton(
+        () => ProductService()
+      );
+  GetIt.instance.registerLazySingleton(
+        () => ProductStore(productService: GetIt.I<ProductService>())
       );
 }
