@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:hive/hive.dart';
+import 'package:hive_flutter/adapters.dart';
 
 const TOKEN_BOX_NAME = 'jwt_token_box';
 const JWT_TOKEN_KEY = 'JWT_token';
@@ -9,6 +9,7 @@ const JWT_TOKEN_KEY = 'JWT_token';
 const storage = FlutterSecureStorage();
 
 Future<void> setupHiveBox() async {
+  await Hive.initFlutter();
   await initializeBoxForToken();
 }
 

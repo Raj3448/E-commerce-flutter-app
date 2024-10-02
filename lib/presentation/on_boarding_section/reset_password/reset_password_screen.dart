@@ -38,36 +38,36 @@ class ResetPassword extends StatelessWidget {
               style: GoogleFonts.poppins(fontSize: 12.px,fontWeight: FontWeight.w400,color: grey),
               ),
               sizedBoxHeight40,
-                 TextField(
-             decoration: InputDecoration(
-               // label: Text('Mobile Number'),
-               focusedBorder: OutlineInputBorder(
+                TextField(
+            decoration: InputDecoration(
+              // label: Text('Mobile Number'),
+              focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: grey.withOpacity(0.3))
-               ),
-               labelText: 'Email or Mobile Number',
-               labelStyle: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 14.px,color: black),
-               border: OutlineInputBorder(
+              ),
+              labelText: 'Email or Mobile Number',
+              labelStyle: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 14.px,color: black),
+              border: OutlineInputBorder(
                 borderSide: BorderSide(color: black,
                 ),
               
 
                 borderRadius: BorderRadius.circular(10)
-               ),
+              ),
               
               //  border: OutlineInputBorder(borderSide: BorderSide.none),
-               hintText: 'Email or Mobile Number *',
-               hintStyle: TextStyle(
+              hintText: 'Email or Mobile Number *',
+              hintStyle: TextStyle(
                 color: grey.withOpacity(0.3),
-               ),
+              ),
               contentPadding: EdgeInsets.all(10)
-             ),
-             
+            ),
+            
             ),
             sizedBoxHeight50,
             GestureDetector(
-               onTap: () {
-                 Get.to(()=>OtpScreen(isReset: true,));
-               },
+              onTap: () {
+                //Get.to(()=>OtpScreen(isReset: true, loginResponseModel: null,));
+              },
               child: ButtonWidget(backgroundColor: buttonColor, title: 'SEND OTP', textColor: whiteColor,heights: Adaptive.h(6),size:19.px ,))
             ],
           ),

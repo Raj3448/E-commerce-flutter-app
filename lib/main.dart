@@ -1,12 +1,15 @@
 import 'package:ecommerce_seller/presentation/on_boarding_section/splash_screen/splash_screen.dart';
 import 'package:ecommerce_seller/register_dependecy_injection.dart';
 import 'package:ecommerce_seller/utilz/colors.dart';
+import 'package:ecommerce_seller/utilz/setup_hivebox.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-Future<void> main() async{
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await registerDependecyInjections();
+  await setupHiveBox();
   runApp(const MyApp());
 }
 

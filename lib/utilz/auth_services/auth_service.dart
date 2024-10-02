@@ -1,6 +1,7 @@
 // ignore_for_file: inference_AuthFailure_on_function_invocation, inference_failure_on_function_invocation, deprecated_member_use, lines_longer_than_80_chars, use_build_context_synchronously, avoid_dynamic_calls
 
 import 'package:ecommerce_seller/presentation/on_boarding_section/create_account/model/create_new_acnt_resp_model.dart';
+import 'package:ecommerce_seller/presentation/on_boarding_section/login_screen/model/login_response_model.dart';
 import 'package:ecommerce_seller/utilz/failure/auth_failure.dart';
 import 'package:ecommerce_seller/utilz/http/http_client.dart';
 import 'package:ecommerce_seller/utilz/token_manager.dart';
@@ -8,7 +9,8 @@ import 'package:fpdart/fpdart.dart';
 import 'package:get_it/get_it.dart';
 
 abstract class IAuthService {
-  Future<Either<AuthFailure, void>> login(String identifier);
+  Future<Either<AuthFailure, LoginResponseModel>> login(
+      String email, String password);
   Future<Either<AuthFailure, CreateNewAcntRespModel>> createNewAccount(
       String userName, String email, String mobileNumber, String password);
   Future<Either<VerifyOTPFailure, void>> verifyOtp(
@@ -21,23 +23,24 @@ class AuthService implements IAuthService {
   final HttpClient httpClient = GetIt.I<HttpClient>();
 
   @override
-  Future<Either<AuthFailure, void>> login(
-    String identifier,
-  ) async {
-    final data = <String, dynamic>{
-      'identifier': identifier,
-    };
+  Future<Either<AuthFailure, LoginResponseModel>> login(
+      String email, String password) async {
+    final data = <String, dynamic>{'email': email, 'password': password};
     try {
       final request = await httpClient.post(
-        '/api/login/',
+        '/login',
         data: data,
       );
       if (request.statusCode == 200) {
-        return const Right(null);
+        final token = request.data['token'];
+        if (token is String) {
+          await GetIt.I<TokenManager>().saveToken(token);
+        }
+        return Right(LoginResponseModel.fromJson(request.data['data']));
       }
 
-      if (request.statusCode == 400) {
-        final dynamic code = request.data?['error']?['details']?['name'];
+      if (request.statusCode == 401) {
+        final dynamic code = request.data?['message'];
         final errorCode = code is String ? code : null;
 
         if (errorCode == null) {
@@ -46,7 +49,9 @@ class AuthService implements IAuthService {
         if (errorCode == LoginErrorCodes.invalidEmail) {
           return const Left(AuthFailure.invalidEmail());
         }
-
+        if (errorCode == LoginErrorCodes.wrongPass) {
+          return const Left(AuthFailure.invalidPassword());
+        }
         if (errorCode == LoginErrorCodes.userDoesNotExit) {
           return const Left(AuthFailure.userNotFound());
         }
@@ -136,8 +141,7 @@ class AuthService implements IAuthService {
               data: signUpData,
             );
       if (phoneNumberVerificationResponse.statusCode == 200) {
-        final token =
-            phoneNumberVerificationResponse.data['token'];
+        final token = phoneNumberVerificationResponse.data['token'];
         if (token is String) {
           await GetIt.I<TokenManager>().saveToken(token);
         }
@@ -174,7 +178,8 @@ class AuthService implements IAuthService {
 
 abstract class LoginErrorCodes {
   static const String invalidEmail = 'INVALID_EMAIL';
-  static const String userDoesNotExit = 'USER_DOESNT_EXIST';
+  static const String userDoesNotExit = 'User not found';
+  static const String wrongPass = 'Invalid password';
 }
 
 abstract class SignUpErrorCodes {

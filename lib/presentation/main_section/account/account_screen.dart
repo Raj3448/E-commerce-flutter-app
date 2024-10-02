@@ -1,3 +1,4 @@
+import 'package:ecommerce_seller/presentation/main_section/account/components/my_account_component.dart';
 import 'package:ecommerce_seller/presentation/main_section/account/coupons/coupon_screen.dart';
 import 'package:ecommerce_seller/presentation/main_section/account/edit_profile_screen/edit_profile_screen.dart';
 import 'package:ecommerce_seller/presentation/main_section/account/more_option_screen/more_option_screen.dart';
@@ -93,13 +94,13 @@ print(bottom.selectedIndex);
                                 }else if(index==2){
                                   Get.to(()=>const WishListScreen());
                                   
-                                 }else if(index==3){
+                                }else if(index==3){
                                         Get.to(()=>const NotificationScreen());
 
-                                 }else if(index==5){
+                                }else if(index==5){
                                                                     Get.to(()=>const ReturnScreen()); 
 
-                                 } else {
+                                } else {
                                   Get.to(()=>const MoreOptionScreen());
                                 }
                               },
@@ -158,73 +159,7 @@ print(bottom.selectedIndex);
             ),
           ),
           // Divider()
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Container(
-              padding: EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black12),
-                  borderRadius: BorderRadius.circular(13)),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        'My Account',
-                        style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w500, fontSize: 13.px),
-                      ),
-                      Spacer(),
-                      GestureDetector(
-                        onTap: () {
-                        Get.to(()=> EditProfileScreen());
-                        },
-                        child: Container(
-                          padding: EdgeInsets.all(10),
-                          decoration: BoxDecoration(
-                              border: Border.all(color: buttonColor),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Center(
-                            child: Text(
-                              'Edit',
-                              style: GoogleFonts.poppins(color: buttonColor),
-                            ),
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                  ListTile(
-                    leading: Image.asset('assets/images/Ellipse 59.png'),
-                    title: Text('Shop Name',
-                        style: GoogleFonts.poppins(
-                            fontSize: 14.px, fontWeight: FontWeight.w500)),
-                    subtitle: Text('1234567890 | Rakesh',
-                        style: GoogleFonts.poppins(
-                            fontSize: 12.px, fontWeight: FontWeight.w500)),
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                          color: grey.withOpacity(0.4),
-                        ),
-                        borderRadius: BorderRadius.circular(12)),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text('Remaining wallet amount: ₹10,000/ ₹15000',
-                            style: GoogleFonts.poppins(
-                                fontSize: 12.px, fontWeight: FontWeight.w500)),
-                        // Spacer(),
-                        Icon(Icons.keyboard_arrow_right)
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
+          MyAccountComponent(),
           sizedBoxHeight20,
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),

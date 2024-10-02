@@ -30,6 +30,7 @@ mixin _$AuthFailure {
     required TResult Function() networkError,
     required TResult Function() internalServerError,
     required TResult Function() badGatewayError,
+    required TResult Function() invalidPassword,
     required TResult Function(String message) unknownError,
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +48,7 @@ mixin _$AuthFailure {
     TResult? Function()? networkError,
     TResult? Function()? internalServerError,
     TResult? Function()? badGatewayError,
+    TResult? Function()? invalidPassword,
     TResult? Function(String message)? unknownError,
   }) =>
       throw _privateConstructorUsedError;
@@ -64,6 +66,7 @@ mixin _$AuthFailure {
     TResult Function()? networkError,
     TResult Function()? internalServerError,
     TResult Function()? badGatewayError,
+    TResult Function()? invalidPassword,
     TResult Function(String message)? unknownError,
     required TResult orElse(),
   }) =>
@@ -82,6 +85,7 @@ mixin _$AuthFailure {
     required TResult Function(NetworkError value) networkError,
     required TResult Function(InternalServerError value) internalServerError,
     required TResult Function(BadGatewayError value) badGatewayError,
+    required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(UnknownError value) unknownError,
   }) =>
       throw _privateConstructorUsedError;
@@ -99,6 +103,7 @@ mixin _$AuthFailure {
     TResult? Function(NetworkError value)? networkError,
     TResult? Function(InternalServerError value)? internalServerError,
     TResult? Function(BadGatewayError value)? badGatewayError,
+    TResult? Function(InvalidPassword value)? invalidPassword,
     TResult? Function(UnknownError value)? unknownError,
   }) =>
       throw _privateConstructorUsedError;
@@ -116,6 +121,7 @@ mixin _$AuthFailure {
     TResult Function(NetworkError value)? networkError,
     TResult Function(InternalServerError value)? internalServerError,
     TResult Function(BadGatewayError value)? badGatewayError,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(UnknownError value)? unknownError,
     required TResult orElse(),
   }) =>
@@ -196,6 +202,7 @@ class _$InvalidPhoneNumberImpl implements InvalidPhoneNumber {
     required TResult Function() networkError,
     required TResult Function() internalServerError,
     required TResult Function() badGatewayError,
+    required TResult Function() invalidPassword,
     required TResult Function(String message) unknownError,
   }) {
     return invalidPhoneNumber();
@@ -216,6 +223,7 @@ class _$InvalidPhoneNumberImpl implements InvalidPhoneNumber {
     TResult? Function()? networkError,
     TResult? Function()? internalServerError,
     TResult? Function()? badGatewayError,
+    TResult? Function()? invalidPassword,
     TResult? Function(String message)? unknownError,
   }) {
     return invalidPhoneNumber?.call();
@@ -236,6 +244,7 @@ class _$InvalidPhoneNumberImpl implements InvalidPhoneNumber {
     TResult Function()? networkError,
     TResult Function()? internalServerError,
     TResult Function()? badGatewayError,
+    TResult Function()? invalidPassword,
     TResult Function(String message)? unknownError,
     required TResult orElse(),
   }) {
@@ -260,6 +269,7 @@ class _$InvalidPhoneNumberImpl implements InvalidPhoneNumber {
     required TResult Function(NetworkError value) networkError,
     required TResult Function(InternalServerError value) internalServerError,
     required TResult Function(BadGatewayError value) badGatewayError,
+    required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(UnknownError value) unknownError,
   }) {
     return invalidPhoneNumber(this);
@@ -280,6 +290,7 @@ class _$InvalidPhoneNumberImpl implements InvalidPhoneNumber {
     TResult? Function(NetworkError value)? networkError,
     TResult? Function(InternalServerError value)? internalServerError,
     TResult? Function(BadGatewayError value)? badGatewayError,
+    TResult? Function(InvalidPassword value)? invalidPassword,
     TResult? Function(UnknownError value)? unknownError,
   }) {
     return invalidPhoneNumber?.call(this);
@@ -300,6 +311,7 @@ class _$InvalidPhoneNumberImpl implements InvalidPhoneNumber {
     TResult Function(NetworkError value)? networkError,
     TResult Function(InternalServerError value)? internalServerError,
     TResult Function(BadGatewayError value)? badGatewayError,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(UnknownError value)? unknownError,
     required TResult orElse(),
   }) {
@@ -367,6 +379,7 @@ class _$InvalidEmailImpl implements InvalidEmail {
     required TResult Function() networkError,
     required TResult Function() internalServerError,
     required TResult Function() badGatewayError,
+    required TResult Function() invalidPassword,
     required TResult Function(String message) unknownError,
   }) {
     return invalidEmail();
@@ -387,6 +400,7 @@ class _$InvalidEmailImpl implements InvalidEmail {
     TResult? Function()? networkError,
     TResult? Function()? internalServerError,
     TResult? Function()? badGatewayError,
+    TResult? Function()? invalidPassword,
     TResult? Function(String message)? unknownError,
   }) {
     return invalidEmail?.call();
@@ -407,6 +421,7 @@ class _$InvalidEmailImpl implements InvalidEmail {
     TResult Function()? networkError,
     TResult Function()? internalServerError,
     TResult Function()? badGatewayError,
+    TResult Function()? invalidPassword,
     TResult Function(String message)? unknownError,
     required TResult orElse(),
   }) {
@@ -431,6 +446,7 @@ class _$InvalidEmailImpl implements InvalidEmail {
     required TResult Function(NetworkError value) networkError,
     required TResult Function(InternalServerError value) internalServerError,
     required TResult Function(BadGatewayError value) badGatewayError,
+    required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(UnknownError value) unknownError,
   }) {
     return invalidEmail(this);
@@ -451,6 +467,7 @@ class _$InvalidEmailImpl implements InvalidEmail {
     TResult? Function(NetworkError value)? networkError,
     TResult? Function(InternalServerError value)? internalServerError,
     TResult? Function(BadGatewayError value)? badGatewayError,
+    TResult? Function(InvalidPassword value)? invalidPassword,
     TResult? Function(UnknownError value)? unknownError,
   }) {
     return invalidEmail?.call(this);
@@ -471,6 +488,7 @@ class _$InvalidEmailImpl implements InvalidEmail {
     TResult Function(NetworkError value)? networkError,
     TResult Function(InternalServerError value)? internalServerError,
     TResult Function(BadGatewayError value)? badGatewayError,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(UnknownError value)? unknownError,
     required TResult orElse(),
   }) {
@@ -538,6 +556,7 @@ class _$UserNotFoundImpl implements UserNotFound {
     required TResult Function() networkError,
     required TResult Function() internalServerError,
     required TResult Function() badGatewayError,
+    required TResult Function() invalidPassword,
     required TResult Function(String message) unknownError,
   }) {
     return userNotFound();
@@ -558,6 +577,7 @@ class _$UserNotFoundImpl implements UserNotFound {
     TResult? Function()? networkError,
     TResult? Function()? internalServerError,
     TResult? Function()? badGatewayError,
+    TResult? Function()? invalidPassword,
     TResult? Function(String message)? unknownError,
   }) {
     return userNotFound?.call();
@@ -578,6 +598,7 @@ class _$UserNotFoundImpl implements UserNotFound {
     TResult Function()? networkError,
     TResult Function()? internalServerError,
     TResult Function()? badGatewayError,
+    TResult Function()? invalidPassword,
     TResult Function(String message)? unknownError,
     required TResult orElse(),
   }) {
@@ -602,6 +623,7 @@ class _$UserNotFoundImpl implements UserNotFound {
     required TResult Function(NetworkError value) networkError,
     required TResult Function(InternalServerError value) internalServerError,
     required TResult Function(BadGatewayError value) badGatewayError,
+    required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(UnknownError value) unknownError,
   }) {
     return userNotFound(this);
@@ -622,6 +644,7 @@ class _$UserNotFoundImpl implements UserNotFound {
     TResult? Function(NetworkError value)? networkError,
     TResult? Function(InternalServerError value)? internalServerError,
     TResult? Function(BadGatewayError value)? badGatewayError,
+    TResult? Function(InvalidPassword value)? invalidPassword,
     TResult? Function(UnknownError value)? unknownError,
   }) {
     return userNotFound?.call(this);
@@ -642,6 +665,7 @@ class _$UserNotFoundImpl implements UserNotFound {
     TResult Function(NetworkError value)? networkError,
     TResult Function(InternalServerError value)? internalServerError,
     TResult Function(BadGatewayError value)? badGatewayError,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(UnknownError value)? unknownError,
     required TResult orElse(),
   }) {
@@ -709,6 +733,7 @@ class _$UserAlreadyExistsImpl implements UserAlreadyExists {
     required TResult Function() networkError,
     required TResult Function() internalServerError,
     required TResult Function() badGatewayError,
+    required TResult Function() invalidPassword,
     required TResult Function(String message) unknownError,
   }) {
     return userAlreadyExists();
@@ -729,6 +754,7 @@ class _$UserAlreadyExistsImpl implements UserAlreadyExists {
     TResult? Function()? networkError,
     TResult? Function()? internalServerError,
     TResult? Function()? badGatewayError,
+    TResult? Function()? invalidPassword,
     TResult? Function(String message)? unknownError,
   }) {
     return userAlreadyExists?.call();
@@ -749,6 +775,7 @@ class _$UserAlreadyExistsImpl implements UserAlreadyExists {
     TResult Function()? networkError,
     TResult Function()? internalServerError,
     TResult Function()? badGatewayError,
+    TResult Function()? invalidPassword,
     TResult Function(String message)? unknownError,
     required TResult orElse(),
   }) {
@@ -773,6 +800,7 @@ class _$UserAlreadyExistsImpl implements UserAlreadyExists {
     required TResult Function(NetworkError value) networkError,
     required TResult Function(InternalServerError value) internalServerError,
     required TResult Function(BadGatewayError value) badGatewayError,
+    required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(UnknownError value) unknownError,
   }) {
     return userAlreadyExists(this);
@@ -793,6 +821,7 @@ class _$UserAlreadyExistsImpl implements UserAlreadyExists {
     TResult? Function(NetworkError value)? networkError,
     TResult? Function(InternalServerError value)? internalServerError,
     TResult? Function(BadGatewayError value)? badGatewayError,
+    TResult? Function(InvalidPassword value)? invalidPassword,
     TResult? Function(UnknownError value)? unknownError,
   }) {
     return userAlreadyExists?.call(this);
@@ -813,6 +842,7 @@ class _$UserAlreadyExistsImpl implements UserAlreadyExists {
     TResult Function(NetworkError value)? networkError,
     TResult Function(InternalServerError value)? internalServerError,
     TResult Function(BadGatewayError value)? badGatewayError,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(UnknownError value)? unknownError,
     required TResult orElse(),
   }) {
@@ -880,6 +910,7 @@ class _$TooManyRequestsImpl implements TooManyRequests {
     required TResult Function() networkError,
     required TResult Function() internalServerError,
     required TResult Function() badGatewayError,
+    required TResult Function() invalidPassword,
     required TResult Function(String message) unknownError,
   }) {
     return tooManyRequests();
@@ -900,6 +931,7 @@ class _$TooManyRequestsImpl implements TooManyRequests {
     TResult? Function()? networkError,
     TResult? Function()? internalServerError,
     TResult? Function()? badGatewayError,
+    TResult? Function()? invalidPassword,
     TResult? Function(String message)? unknownError,
   }) {
     return tooManyRequests?.call();
@@ -920,6 +952,7 @@ class _$TooManyRequestsImpl implements TooManyRequests {
     TResult Function()? networkError,
     TResult Function()? internalServerError,
     TResult Function()? badGatewayError,
+    TResult Function()? invalidPassword,
     TResult Function(String message)? unknownError,
     required TResult orElse(),
   }) {
@@ -944,6 +977,7 @@ class _$TooManyRequestsImpl implements TooManyRequests {
     required TResult Function(NetworkError value) networkError,
     required TResult Function(InternalServerError value) internalServerError,
     required TResult Function(BadGatewayError value) badGatewayError,
+    required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(UnknownError value) unknownError,
   }) {
     return tooManyRequests(this);
@@ -964,6 +998,7 @@ class _$TooManyRequestsImpl implements TooManyRequests {
     TResult? Function(NetworkError value)? networkError,
     TResult? Function(InternalServerError value)? internalServerError,
     TResult? Function(BadGatewayError value)? badGatewayError,
+    TResult? Function(InvalidPassword value)? invalidPassword,
     TResult? Function(UnknownError value)? unknownError,
   }) {
     return tooManyRequests?.call(this);
@@ -984,6 +1019,7 @@ class _$TooManyRequestsImpl implements TooManyRequests {
     TResult Function(NetworkError value)? networkError,
     TResult Function(InternalServerError value)? internalServerError,
     TResult Function(BadGatewayError value)? badGatewayError,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(UnknownError value)? unknownError,
     required TResult orElse(),
   }) {
@@ -1051,6 +1087,7 @@ class _$OtpExpiredImpl implements OtpExpired {
     required TResult Function() networkError,
     required TResult Function() internalServerError,
     required TResult Function() badGatewayError,
+    required TResult Function() invalidPassword,
     required TResult Function(String message) unknownError,
   }) {
     return otpExpired();
@@ -1071,6 +1108,7 @@ class _$OtpExpiredImpl implements OtpExpired {
     TResult? Function()? networkError,
     TResult? Function()? internalServerError,
     TResult? Function()? badGatewayError,
+    TResult? Function()? invalidPassword,
     TResult? Function(String message)? unknownError,
   }) {
     return otpExpired?.call();
@@ -1091,6 +1129,7 @@ class _$OtpExpiredImpl implements OtpExpired {
     TResult Function()? networkError,
     TResult Function()? internalServerError,
     TResult Function()? badGatewayError,
+    TResult Function()? invalidPassword,
     TResult Function(String message)? unknownError,
     required TResult orElse(),
   }) {
@@ -1115,6 +1154,7 @@ class _$OtpExpiredImpl implements OtpExpired {
     required TResult Function(NetworkError value) networkError,
     required TResult Function(InternalServerError value) internalServerError,
     required TResult Function(BadGatewayError value) badGatewayError,
+    required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(UnknownError value) unknownError,
   }) {
     return otpExpired(this);
@@ -1135,6 +1175,7 @@ class _$OtpExpiredImpl implements OtpExpired {
     TResult? Function(NetworkError value)? networkError,
     TResult? Function(InternalServerError value)? internalServerError,
     TResult? Function(BadGatewayError value)? badGatewayError,
+    TResult? Function(InvalidPassword value)? invalidPassword,
     TResult? Function(UnknownError value)? unknownError,
   }) {
     return otpExpired?.call(this);
@@ -1155,6 +1196,7 @@ class _$OtpExpiredImpl implements OtpExpired {
     TResult Function(NetworkError value)? networkError,
     TResult Function(InternalServerError value)? internalServerError,
     TResult Function(BadGatewayError value)? badGatewayError,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(UnknownError value)? unknownError,
     required TResult orElse(),
   }) {
@@ -1222,6 +1264,7 @@ class _$OtpInvalidImpl implements OtpInvalid {
     required TResult Function() networkError,
     required TResult Function() internalServerError,
     required TResult Function() badGatewayError,
+    required TResult Function() invalidPassword,
     required TResult Function(String message) unknownError,
   }) {
     return otpInvalid();
@@ -1242,6 +1285,7 @@ class _$OtpInvalidImpl implements OtpInvalid {
     TResult? Function()? networkError,
     TResult? Function()? internalServerError,
     TResult? Function()? badGatewayError,
+    TResult? Function()? invalidPassword,
     TResult? Function(String message)? unknownError,
   }) {
     return otpInvalid?.call();
@@ -1262,6 +1306,7 @@ class _$OtpInvalidImpl implements OtpInvalid {
     TResult Function()? networkError,
     TResult Function()? internalServerError,
     TResult Function()? badGatewayError,
+    TResult Function()? invalidPassword,
     TResult Function(String message)? unknownError,
     required TResult orElse(),
   }) {
@@ -1286,6 +1331,7 @@ class _$OtpInvalidImpl implements OtpInvalid {
     required TResult Function(NetworkError value) networkError,
     required TResult Function(InternalServerError value) internalServerError,
     required TResult Function(BadGatewayError value) badGatewayError,
+    required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(UnknownError value) unknownError,
   }) {
     return otpInvalid(this);
@@ -1306,6 +1352,7 @@ class _$OtpInvalidImpl implements OtpInvalid {
     TResult? Function(NetworkError value)? networkError,
     TResult? Function(InternalServerError value)? internalServerError,
     TResult? Function(BadGatewayError value)? badGatewayError,
+    TResult? Function(InvalidPassword value)? invalidPassword,
     TResult? Function(UnknownError value)? unknownError,
   }) {
     return otpInvalid?.call(this);
@@ -1326,6 +1373,7 @@ class _$OtpInvalidImpl implements OtpInvalid {
     TResult Function(NetworkError value)? networkError,
     TResult Function(InternalServerError value)? internalServerError,
     TResult Function(BadGatewayError value)? badGatewayError,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(UnknownError value)? unknownError,
     required TResult orElse(),
   }) {
@@ -1393,6 +1441,7 @@ class _$EmailAlreadyInUseImpl implements EmailAlreadyInUse {
     required TResult Function() networkError,
     required TResult Function() internalServerError,
     required TResult Function() badGatewayError,
+    required TResult Function() invalidPassword,
     required TResult Function(String message) unknownError,
   }) {
     return emailAlreadyInUse();
@@ -1413,6 +1462,7 @@ class _$EmailAlreadyInUseImpl implements EmailAlreadyInUse {
     TResult? Function()? networkError,
     TResult? Function()? internalServerError,
     TResult? Function()? badGatewayError,
+    TResult? Function()? invalidPassword,
     TResult? Function(String message)? unknownError,
   }) {
     return emailAlreadyInUse?.call();
@@ -1433,6 +1483,7 @@ class _$EmailAlreadyInUseImpl implements EmailAlreadyInUse {
     TResult Function()? networkError,
     TResult Function()? internalServerError,
     TResult Function()? badGatewayError,
+    TResult Function()? invalidPassword,
     TResult Function(String message)? unknownError,
     required TResult orElse(),
   }) {
@@ -1457,6 +1508,7 @@ class _$EmailAlreadyInUseImpl implements EmailAlreadyInUse {
     required TResult Function(NetworkError value) networkError,
     required TResult Function(InternalServerError value) internalServerError,
     required TResult Function(BadGatewayError value) badGatewayError,
+    required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(UnknownError value) unknownError,
   }) {
     return emailAlreadyInUse(this);
@@ -1477,6 +1529,7 @@ class _$EmailAlreadyInUseImpl implements EmailAlreadyInUse {
     TResult? Function(NetworkError value)? networkError,
     TResult? Function(InternalServerError value)? internalServerError,
     TResult? Function(BadGatewayError value)? badGatewayError,
+    TResult? Function(InvalidPassword value)? invalidPassword,
     TResult? Function(UnknownError value)? unknownError,
   }) {
     return emailAlreadyInUse?.call(this);
@@ -1497,6 +1550,7 @@ class _$EmailAlreadyInUseImpl implements EmailAlreadyInUse {
     TResult Function(NetworkError value)? networkError,
     TResult Function(InternalServerError value)? internalServerError,
     TResult Function(BadGatewayError value)? badGatewayError,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(UnknownError value)? unknownError,
     required TResult orElse(),
   }) {
@@ -1564,6 +1618,7 @@ class _$TokenExpiredImpl implements TokenExpired {
     required TResult Function() networkError,
     required TResult Function() internalServerError,
     required TResult Function() badGatewayError,
+    required TResult Function() invalidPassword,
     required TResult Function(String message) unknownError,
   }) {
     return tokenExpired();
@@ -1584,6 +1639,7 @@ class _$TokenExpiredImpl implements TokenExpired {
     TResult? Function()? networkError,
     TResult? Function()? internalServerError,
     TResult? Function()? badGatewayError,
+    TResult? Function()? invalidPassword,
     TResult? Function(String message)? unknownError,
   }) {
     return tokenExpired?.call();
@@ -1604,6 +1660,7 @@ class _$TokenExpiredImpl implements TokenExpired {
     TResult Function()? networkError,
     TResult Function()? internalServerError,
     TResult Function()? badGatewayError,
+    TResult Function()? invalidPassword,
     TResult Function(String message)? unknownError,
     required TResult orElse(),
   }) {
@@ -1628,6 +1685,7 @@ class _$TokenExpiredImpl implements TokenExpired {
     required TResult Function(NetworkError value) networkError,
     required TResult Function(InternalServerError value) internalServerError,
     required TResult Function(BadGatewayError value) badGatewayError,
+    required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(UnknownError value) unknownError,
   }) {
     return tokenExpired(this);
@@ -1648,6 +1706,7 @@ class _$TokenExpiredImpl implements TokenExpired {
     TResult? Function(NetworkError value)? networkError,
     TResult? Function(InternalServerError value)? internalServerError,
     TResult? Function(BadGatewayError value)? badGatewayError,
+    TResult? Function(InvalidPassword value)? invalidPassword,
     TResult? Function(UnknownError value)? unknownError,
   }) {
     return tokenExpired?.call(this);
@@ -1668,6 +1727,7 @@ class _$TokenExpiredImpl implements TokenExpired {
     TResult Function(NetworkError value)? networkError,
     TResult Function(InternalServerError value)? internalServerError,
     TResult Function(BadGatewayError value)? badGatewayError,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(UnknownError value)? unknownError,
     required TResult orElse(),
   }) {
@@ -1735,6 +1795,7 @@ class _$NetworkErrorImpl implements NetworkError {
     required TResult Function() networkError,
     required TResult Function() internalServerError,
     required TResult Function() badGatewayError,
+    required TResult Function() invalidPassword,
     required TResult Function(String message) unknownError,
   }) {
     return networkError();
@@ -1755,6 +1816,7 @@ class _$NetworkErrorImpl implements NetworkError {
     TResult? Function()? networkError,
     TResult? Function()? internalServerError,
     TResult? Function()? badGatewayError,
+    TResult? Function()? invalidPassword,
     TResult? Function(String message)? unknownError,
   }) {
     return networkError?.call();
@@ -1775,6 +1837,7 @@ class _$NetworkErrorImpl implements NetworkError {
     TResult Function()? networkError,
     TResult Function()? internalServerError,
     TResult Function()? badGatewayError,
+    TResult Function()? invalidPassword,
     TResult Function(String message)? unknownError,
     required TResult orElse(),
   }) {
@@ -1799,6 +1862,7 @@ class _$NetworkErrorImpl implements NetworkError {
     required TResult Function(NetworkError value) networkError,
     required TResult Function(InternalServerError value) internalServerError,
     required TResult Function(BadGatewayError value) badGatewayError,
+    required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(UnknownError value) unknownError,
   }) {
     return networkError(this);
@@ -1819,6 +1883,7 @@ class _$NetworkErrorImpl implements NetworkError {
     TResult? Function(NetworkError value)? networkError,
     TResult? Function(InternalServerError value)? internalServerError,
     TResult? Function(BadGatewayError value)? badGatewayError,
+    TResult? Function(InvalidPassword value)? invalidPassword,
     TResult? Function(UnknownError value)? unknownError,
   }) {
     return networkError?.call(this);
@@ -1839,6 +1904,7 @@ class _$NetworkErrorImpl implements NetworkError {
     TResult Function(NetworkError value)? networkError,
     TResult Function(InternalServerError value)? internalServerError,
     TResult Function(BadGatewayError value)? badGatewayError,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(UnknownError value)? unknownError,
     required TResult orElse(),
   }) {
@@ -1907,6 +1973,7 @@ class _$InternalServerErrorImpl implements InternalServerError {
     required TResult Function() networkError,
     required TResult Function() internalServerError,
     required TResult Function() badGatewayError,
+    required TResult Function() invalidPassword,
     required TResult Function(String message) unknownError,
   }) {
     return internalServerError();
@@ -1927,6 +1994,7 @@ class _$InternalServerErrorImpl implements InternalServerError {
     TResult? Function()? networkError,
     TResult? Function()? internalServerError,
     TResult? Function()? badGatewayError,
+    TResult? Function()? invalidPassword,
     TResult? Function(String message)? unknownError,
   }) {
     return internalServerError?.call();
@@ -1947,6 +2015,7 @@ class _$InternalServerErrorImpl implements InternalServerError {
     TResult Function()? networkError,
     TResult Function()? internalServerError,
     TResult Function()? badGatewayError,
+    TResult Function()? invalidPassword,
     TResult Function(String message)? unknownError,
     required TResult orElse(),
   }) {
@@ -1971,6 +2040,7 @@ class _$InternalServerErrorImpl implements InternalServerError {
     required TResult Function(NetworkError value) networkError,
     required TResult Function(InternalServerError value) internalServerError,
     required TResult Function(BadGatewayError value) badGatewayError,
+    required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(UnknownError value) unknownError,
   }) {
     return internalServerError(this);
@@ -1991,6 +2061,7 @@ class _$InternalServerErrorImpl implements InternalServerError {
     TResult? Function(NetworkError value)? networkError,
     TResult? Function(InternalServerError value)? internalServerError,
     TResult? Function(BadGatewayError value)? badGatewayError,
+    TResult? Function(InvalidPassword value)? invalidPassword,
     TResult? Function(UnknownError value)? unknownError,
   }) {
     return internalServerError?.call(this);
@@ -2011,6 +2082,7 @@ class _$InternalServerErrorImpl implements InternalServerError {
     TResult Function(NetworkError value)? networkError,
     TResult Function(InternalServerError value)? internalServerError,
     TResult Function(BadGatewayError value)? badGatewayError,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(UnknownError value)? unknownError,
     required TResult orElse(),
   }) {
@@ -2078,6 +2150,7 @@ class _$BadGatewayErrorImpl implements BadGatewayError {
     required TResult Function() networkError,
     required TResult Function() internalServerError,
     required TResult Function() badGatewayError,
+    required TResult Function() invalidPassword,
     required TResult Function(String message) unknownError,
   }) {
     return badGatewayError();
@@ -2098,6 +2171,7 @@ class _$BadGatewayErrorImpl implements BadGatewayError {
     TResult? Function()? networkError,
     TResult? Function()? internalServerError,
     TResult? Function()? badGatewayError,
+    TResult? Function()? invalidPassword,
     TResult? Function(String message)? unknownError,
   }) {
     return badGatewayError?.call();
@@ -2118,6 +2192,7 @@ class _$BadGatewayErrorImpl implements BadGatewayError {
     TResult Function()? networkError,
     TResult Function()? internalServerError,
     TResult Function()? badGatewayError,
+    TResult Function()? invalidPassword,
     TResult Function(String message)? unknownError,
     required TResult orElse(),
   }) {
@@ -2142,6 +2217,7 @@ class _$BadGatewayErrorImpl implements BadGatewayError {
     required TResult Function(NetworkError value) networkError,
     required TResult Function(InternalServerError value) internalServerError,
     required TResult Function(BadGatewayError value) badGatewayError,
+    required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(UnknownError value) unknownError,
   }) {
     return badGatewayError(this);
@@ -2162,6 +2238,7 @@ class _$BadGatewayErrorImpl implements BadGatewayError {
     TResult? Function(NetworkError value)? networkError,
     TResult? Function(InternalServerError value)? internalServerError,
     TResult? Function(BadGatewayError value)? badGatewayError,
+    TResult? Function(InvalidPassword value)? invalidPassword,
     TResult? Function(UnknownError value)? unknownError,
   }) {
     return badGatewayError?.call(this);
@@ -2182,6 +2259,7 @@ class _$BadGatewayErrorImpl implements BadGatewayError {
     TResult Function(NetworkError value)? networkError,
     TResult Function(InternalServerError value)? internalServerError,
     TResult Function(BadGatewayError value)? badGatewayError,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(UnknownError value)? unknownError,
     required TResult orElse(),
   }) {
@@ -2194,6 +2272,183 @@ class _$BadGatewayErrorImpl implements BadGatewayError {
 
 abstract class BadGatewayError implements AuthFailure {
   const factory BadGatewayError() = _$BadGatewayErrorImpl;
+}
+
+/// @nodoc
+abstract class _$$InvalidPasswordImplCopyWith<$Res> {
+  factory _$$InvalidPasswordImplCopyWith(_$InvalidPasswordImpl value,
+          $Res Function(_$InvalidPasswordImpl) then) =
+      __$$InvalidPasswordImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$InvalidPasswordImplCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$InvalidPasswordImpl>
+    implements _$$InvalidPasswordImplCopyWith<$Res> {
+  __$$InvalidPasswordImplCopyWithImpl(
+      _$InvalidPasswordImpl _value, $Res Function(_$InvalidPasswordImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AuthFailure
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$InvalidPasswordImpl implements InvalidPassword {
+  const _$InvalidPasswordImpl();
+
+  @override
+  String toString() {
+    return 'AuthFailure.invalidPassword()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$InvalidPasswordImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() invalidPhoneNumber,
+    required TResult Function() invalidEmail,
+    required TResult Function() userNotFound,
+    required TResult Function() userAlreadyExists,
+    required TResult Function() tooManyRequests,
+    required TResult Function() otpExpired,
+    required TResult Function() otpInvalid,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() tokenExpired,
+    required TResult Function() networkError,
+    required TResult Function() internalServerError,
+    required TResult Function() badGatewayError,
+    required TResult Function() invalidPassword,
+    required TResult Function(String message) unknownError,
+  }) {
+    return invalidPassword();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? invalidPhoneNumber,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? userNotFound,
+    TResult? Function()? userAlreadyExists,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? otpExpired,
+    TResult? Function()? otpInvalid,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? tokenExpired,
+    TResult? Function()? networkError,
+    TResult? Function()? internalServerError,
+    TResult? Function()? badGatewayError,
+    TResult? Function()? invalidPassword,
+    TResult? Function(String message)? unknownError,
+  }) {
+    return invalidPassword?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? invalidPhoneNumber,
+    TResult Function()? invalidEmail,
+    TResult Function()? userNotFound,
+    TResult Function()? userAlreadyExists,
+    TResult Function()? tooManyRequests,
+    TResult Function()? otpExpired,
+    TResult Function()? otpInvalid,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? tokenExpired,
+    TResult Function()? networkError,
+    TResult Function()? internalServerError,
+    TResult Function()? badGatewayError,
+    TResult Function()? invalidPassword,
+    TResult Function(String message)? unknownError,
+    required TResult orElse(),
+  }) {
+    if (invalidPassword != null) {
+      return invalidPassword();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(InvalidPhoneNumber value) invalidPhoneNumber,
+    required TResult Function(InvalidEmail value) invalidEmail,
+    required TResult Function(UserNotFound value) userNotFound,
+    required TResult Function(UserAlreadyExists value) userAlreadyExists,
+    required TResult Function(TooManyRequests value) tooManyRequests,
+    required TResult Function(OtpExpired value) otpExpired,
+    required TResult Function(OtpInvalid value) otpInvalid,
+    required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
+    required TResult Function(TokenExpired value) tokenExpired,
+    required TResult Function(NetworkError value) networkError,
+    required TResult Function(InternalServerError value) internalServerError,
+    required TResult Function(BadGatewayError value) badGatewayError,
+    required TResult Function(InvalidPassword value) invalidPassword,
+    required TResult Function(UnknownError value) unknownError,
+  }) {
+    return invalidPassword(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(InvalidPhoneNumber value)? invalidPhoneNumber,
+    TResult? Function(InvalidEmail value)? invalidEmail,
+    TResult? Function(UserNotFound value)? userNotFound,
+    TResult? Function(UserAlreadyExists value)? userAlreadyExists,
+    TResult? Function(TooManyRequests value)? tooManyRequests,
+    TResult? Function(OtpExpired value)? otpExpired,
+    TResult? Function(OtpInvalid value)? otpInvalid,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(TokenExpired value)? tokenExpired,
+    TResult? Function(NetworkError value)? networkError,
+    TResult? Function(InternalServerError value)? internalServerError,
+    TResult? Function(BadGatewayError value)? badGatewayError,
+    TResult? Function(InvalidPassword value)? invalidPassword,
+    TResult? Function(UnknownError value)? unknownError,
+  }) {
+    return invalidPassword?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InvalidPhoneNumber value)? invalidPhoneNumber,
+    TResult Function(InvalidEmail value)? invalidEmail,
+    TResult Function(UserNotFound value)? userNotFound,
+    TResult Function(UserAlreadyExists value)? userAlreadyExists,
+    TResult Function(TooManyRequests value)? tooManyRequests,
+    TResult Function(OtpExpired value)? otpExpired,
+    TResult Function(OtpInvalid value)? otpInvalid,
+    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult Function(TokenExpired value)? tokenExpired,
+    TResult Function(NetworkError value)? networkError,
+    TResult Function(InternalServerError value)? internalServerError,
+    TResult Function(BadGatewayError value)? badGatewayError,
+    TResult Function(InvalidPassword value)? invalidPassword,
+    TResult Function(UnknownError value)? unknownError,
+    required TResult orElse(),
+  }) {
+    if (invalidPassword != null) {
+      return invalidPassword(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class InvalidPassword implements AuthFailure {
+  const factory InvalidPassword() = _$InvalidPasswordImpl;
 }
 
 /// @nodoc
@@ -2276,6 +2531,7 @@ class _$UnknownErrorImpl implements UnknownError {
     required TResult Function() networkError,
     required TResult Function() internalServerError,
     required TResult Function() badGatewayError,
+    required TResult Function() invalidPassword,
     required TResult Function(String message) unknownError,
   }) {
     return unknownError(message);
@@ -2296,6 +2552,7 @@ class _$UnknownErrorImpl implements UnknownError {
     TResult? Function()? networkError,
     TResult? Function()? internalServerError,
     TResult? Function()? badGatewayError,
+    TResult? Function()? invalidPassword,
     TResult? Function(String message)? unknownError,
   }) {
     return unknownError?.call(message);
@@ -2316,6 +2573,7 @@ class _$UnknownErrorImpl implements UnknownError {
     TResult Function()? networkError,
     TResult Function()? internalServerError,
     TResult Function()? badGatewayError,
+    TResult Function()? invalidPassword,
     TResult Function(String message)? unknownError,
     required TResult orElse(),
   }) {
@@ -2340,6 +2598,7 @@ class _$UnknownErrorImpl implements UnknownError {
     required TResult Function(NetworkError value) networkError,
     required TResult Function(InternalServerError value) internalServerError,
     required TResult Function(BadGatewayError value) badGatewayError,
+    required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(UnknownError value) unknownError,
   }) {
     return unknownError(this);
@@ -2360,6 +2619,7 @@ class _$UnknownErrorImpl implements UnknownError {
     TResult? Function(NetworkError value)? networkError,
     TResult? Function(InternalServerError value)? internalServerError,
     TResult? Function(BadGatewayError value)? badGatewayError,
+    TResult? Function(InvalidPassword value)? invalidPassword,
     TResult? Function(UnknownError value)? unknownError,
   }) {
     return unknownError?.call(this);
@@ -2380,6 +2640,7 @@ class _$UnknownErrorImpl implements UnknownError {
     TResult Function(NetworkError value)? networkError,
     TResult Function(InternalServerError value)? internalServerError,
     TResult Function(BadGatewayError value)? badGatewayError,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(UnknownError value)? unknownError,
     required TResult orElse(),
   }) {

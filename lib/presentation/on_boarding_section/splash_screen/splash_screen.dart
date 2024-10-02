@@ -3,9 +3,12 @@
 // ignore_for_file: use_build_context_synchronously
 
 
+import 'package:ecommerce_seller/presentation/main_section/bottom_navigation/bottom_navigation_screen.dart';
 import 'package:ecommerce_seller/presentation/on_boarding_section/walk_through/walk_through.dart';
+import 'package:ecommerce_seller/utilz/token_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_it/get_it.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -61,8 +64,8 @@ class _SplashScreenState extends State<SplashScreen> {
   loginScreen() async{
   
   await Future.delayed(const Duration(seconds: 3));
-        
-   Get.to(()=>WalkThroughScreen());
+  final String? token = (await GetIt.I<TokenManager>().getToken())?.toString();
+    Get.to(()=> token != null || (token?.isNotEmpty ?? false) ? BottomNavigation() : WalkThroughScreen());
   }
   
 }

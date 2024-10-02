@@ -79,7 +79,7 @@ class LoginScreenWithPhone extends StatelessWidget {
         SizedBox(height: Adaptive.h(8),),
         InkWell(
           onTap: () {
-            Get.to(()=> OtpScreen());
+            //Get.to(()=> OtpScreen());
           },
           child: ButtonWidget(backgroundColor:buttonColor , title: 'Get Otp', textColor: Colors.white,heights: Adaptive.h(6),)),
         SizedBox(height: 2.h,),

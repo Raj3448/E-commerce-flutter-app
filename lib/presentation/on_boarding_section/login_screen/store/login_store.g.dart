@@ -25,39 +25,6 @@ mixin _$LoginStore on _LoginStoreBase, Store {
     });
   }
 
-  late final _$selectCountryDialCodeAtom =
-      Atom(name: '_LoginStoreBase.selectCountryDialCode', context: context);
-
-  @override
-  String? get selectCountryDialCode {
-    _$selectCountryDialCodeAtom.reportRead();
-    return super.selectCountryDialCode;
-  }
-
-  @override
-  set selectCountryDialCode(String? value) {
-    _$selectCountryDialCodeAtom.reportWrite(value, super.selectCountryDialCode,
-        () {
-      super.selectCountryDialCode = value;
-    });
-  }
-
-  late final _$selectCountryCodeAtom =
-      Atom(name: '_LoginStoreBase.selectCountryCode', context: context);
-
-  @override
-  String? get selectCountryCode {
-    _$selectCountryCodeAtom.reportRead();
-    return super.selectCountryCode;
-  }
-
-  @override
-  set selectCountryCode(String? value) {
-    _$selectCountryCodeAtom.reportWrite(value, super.selectCountryCode, () {
-      super.selectCountryCode = value;
-    });
-  }
-
   late final _$isLoadingAtom =
       Atom(name: '_LoginStoreBase.isLoading', context: context);
 
@@ -74,52 +41,51 @@ mixin _$LoginStore on _LoginStoreBase, Store {
     });
   }
 
-  late final _$identifierAtom =
-      Atom(name: '_LoginStoreBase.identifier', context: context);
-
-  @override
-  String get identifier {
-    _$identifierAtom.reportRead();
-    return super.identifier;
-  }
-
-  @override
-  set identifier(String value) {
-    _$identifierAtom.reportWrite(value, super.identifier, () {
-      super.identifier = value;
-    });
-  }
-
   late final _$authFailureAtom =
       Atom(name: '_LoginStoreBase.authFailure', context: context);
 
   @override
-  Either<AuthFailure, void>? get authFailure {
+  Either<AuthFailure, LoginResponseModel>? get authFailure {
     _$authFailureAtom.reportRead();
     return super.authFailure;
   }
 
   @override
-  set authFailure(Either<AuthFailure, void>? value) {
+  set authFailure(Either<AuthFailure, LoginResponseModel>? value) {
     _$authFailureAtom.reportWrite(value, super.authFailure, () {
       super.authFailure = value;
     });
   }
 
-  late final _$selectCountryFlagEmojiAtom =
-      Atom(name: '_LoginStoreBase.selectCountryFlagEmoji', context: context);
+  late final _$otpFailureAtom =
+      Atom(name: '_LoginStoreBase.otpFailure', context: context);
 
   @override
-  String? get selectCountryFlagEmoji {
-    _$selectCountryFlagEmojiAtom.reportRead();
-    return super.selectCountryFlagEmoji;
+  String? get otpFailure {
+    _$otpFailureAtom.reportRead();
+    return super.otpFailure;
   }
 
   @override
-  set selectCountryFlagEmoji(String? value) {
-    _$selectCountryFlagEmojiAtom
-        .reportWrite(value, super.selectCountryFlagEmoji, () {
-      super.selectCountryFlagEmoji = value;
+  set otpFailure(String? value) {
+    _$otpFailureAtom.reportWrite(value, super.otpFailure, () {
+      super.otpFailure = value;
+    });
+  }
+
+  late final _$otpSuccessAtom =
+      Atom(name: '_LoginStoreBase.otpSuccess', context: context);
+
+  @override
+  bool get otpSuccess {
+    _$otpSuccessAtom.reportRead();
+    return super.otpSuccess;
+  }
+
+  @override
+  set otpSuccess(bool value) {
+    _$otpSuccessAtom.reportWrite(value, super.otpSuccess, () {
+      super.otpSuccess = value;
     });
   }
 
@@ -127,11 +93,22 @@ mixin _$LoginStore on _LoginStoreBase, Store {
       ActionController(name: '_LoginStoreBase', context: context);
 
   @override
-  void login(String identifier) {
+  void login({required String email, required String password}) {
     final _$actionInfo = _$_LoginStoreBaseActionController.startAction(
         name: '_LoginStoreBase.login');
     try {
-      return super.login(identifier);
+      return super.login(email: email, password: password);
+    } finally {
+      _$_LoginStoreBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void otpVerification({required String otp, required String id}) {
+    final _$actionInfo = _$_LoginStoreBaseActionController.startAction(
+        name: '_LoginStoreBase.otpVerification');
+    try {
+      return super.otpVerification(otp: otp, id: id);
     } finally {
       _$_LoginStoreBaseActionController.endAction(_$actionInfo);
     }
@@ -141,12 +118,10 @@ mixin _$LoginStore on _LoginStoreBase, Store {
   String toString() {
     return '''
 isEmail: ${isEmail},
-selectCountryDialCode: ${selectCountryDialCode},
-selectCountryCode: ${selectCountryCode},
 isLoading: ${isLoading},
-identifier: ${identifier},
 authFailure: ${authFailure},
-selectCountryFlagEmoji: ${selectCountryFlagEmoji}
+otpFailure: ${otpFailure},
+otpSuccess: ${otpSuccess}
     ''';
   }
 }

@@ -15,6 +15,7 @@ abstract class AuthFailure with _$AuthFailure {
   const factory AuthFailure.networkError() = NetworkError;
   const factory AuthFailure.internalServerError() = InternalServerError;
   const factory AuthFailure.badGatewayError() = BadGatewayError;
+  const factory AuthFailure.invalidPassword() = InvalidPassword;
   const factory AuthFailure.unknownError(String message) = UnknownError;
 }
 

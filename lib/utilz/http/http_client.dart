@@ -1,11 +1,13 @@
 import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
 import 'package:dio_cache_interceptor/dio_cache_interceptor.dart';
-import 'package:ecommerce_seller/utilz/http_interceptors/auth_interceptors.dart';
-import 'package:ecommerce_seller/utilz/http_interceptors/error_interceptors.dart';
-import 'package:ecommerce_seller/utilz/http_interceptors/user_agent_interceptors.dart';
+import 'package:ecommerce_seller/utilz/http/http_interceptors/auth_interceptors.dart';
+import 'package:ecommerce_seller/utilz/http/http_interceptors/error_interceptors.dart';
+import 'package:ecommerce_seller/utilz/http/http_interceptors/user_agent_interceptors.dart';
+import 'package:ecommerce_seller/utilz/token_manager.dart';
 // import 'package:dio_firebase_performance/dio_firebase_performance.dart';
 import 'package:flutter/foundation.dart';
+import 'package:get_it/get_it.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 class HttpClient with DioMixin implements Dio {
@@ -20,12 +22,11 @@ class HttpClient with DioMixin implements Dio {
     // Use IOHttpClientAdapter for network communication
     httpClientAdapter = IOHttpClientAdapter();
 
-    // Get token storage from a service locator (GetIt in this case)
-    // final tokenStorage = GetIt.I<TokenManager>();
+    final tokenStorage = GetIt.I<TokenManager>();
 
     interceptors.addAll([
       ErrorInterceptor(),
-      AuthInterceptor(),
+      AuthInterceptor(tokenStorage),
       UserAgentInterceptor(),
       // DioFirebasePerformanceInterceptor(),
     ]);

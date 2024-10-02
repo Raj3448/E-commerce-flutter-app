@@ -17,7 +17,7 @@ class ExtractedProfileWidget extends StatelessWidget {
             child: Column(
               children: [
                 sizedBoxHeight10,
-             Align(
+            Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
                       'Shop Name',
@@ -27,7 +27,7 @@ class ExtractedProfileWidget extends StatelessWidget {
                   ),
                             customtextfieldregister(hinttext: 'NewTiq'),
                               sizedBoxHeight15,
-             Align(
+            Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
                       'Shop Owner Name',
@@ -36,8 +36,8 @@ class ExtractedProfileWidget extends StatelessWidget {
                     ),
                   ),
                             customtextfieldregister(hinttext: 'Rakesh'),
-                               sizedBoxHeight15,
-             Align(
+                              sizedBoxHeight15,
+            Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
                       'Mobile Number',
@@ -47,7 +47,7 @@ class ExtractedProfileWidget extends StatelessWidget {
                   ),
                             customtextfieldregister(hinttext: '+91| 1234567890'),
                                                 sizedBoxHeight15,
-             Align(
+            Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
                       'Email Address',
@@ -57,7 +57,7 @@ class ExtractedProfileWidget extends StatelessWidget {
                   ),
                             customtextfieldregister(hinttext: 'example@gmail.com'),
           sizedBoxHeight20,
-               ButtonWidget(backgroundColor: chatColor, title: 'Save Details', textColor: black,heights: Adaptive.h(6))
+              ButtonWidget(backgroundColor: chatColor, title: 'Save Details', textColor: black,heights: Adaptive.h(6))
               ],
             ),
           );
