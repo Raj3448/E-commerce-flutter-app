@@ -129,7 +129,7 @@ class _TopProductScreenState extends State<TopProductScreen> {
                       itemBuilder: (context, index) {
                         return InkWell(
                           onTap: () {
-                            Get.to(() => ProductDetailsScreen());
+                            Get.to(() => ProductDetailsScreen(productDetails: store.allProductDetailModel!.data[index]));
                             // Navigator.push(context, MaterialPageRoute(builder: (context) => AnimalDetails(),));
                           },
                           child: Container(
@@ -170,7 +170,6 @@ class _TopProductScreenState extends State<TopProductScreen> {
                                               fontSize: 13.px,
                                               fontWeight: FontWeight.w600),
                                         )
-
                                         // Icon(Icons.share,size: 12.sp,color: green,)
                                       ],
                                     ),
